@@ -89,7 +89,7 @@ And we can close PowerShell afterwards.
 
 ## Usage
 
-To run the Proxy, open a Powershell terminal and navigate to scripts location, and follow next steps:
+To run the Proxy, you can use either the `run.ps1` script provided in the reposotiry (in the same way as `setup.ps1` can be used), or by open a Powershell terminal and navigate to scripts location, and follow next steps:
 
 ### 1. Activate virtual environment
 ````
