@@ -36,8 +36,8 @@
 # ###################################################################
 #                            I  N  D  E  X                           
 # ###################################################################
-debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Index_JSON.txt"
-debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Index_Input.txt"
+# debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Index_JSON.txt"
+# debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Index_Input.txt"
 json "ON"
 # json_select_object "results"
 
@@ -73,8 +73,8 @@ json_foreach_end
 # ###################################################################
 #                   A  L  B  U  M   (JSON version)
 # ###################################################################
-debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON.txt"
-debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON_Input.txt"
+# debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON.txt"
+# debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON_Input.txt"
 json "ON"
 
 # Campos principales
