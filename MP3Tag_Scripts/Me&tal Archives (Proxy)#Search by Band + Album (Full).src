@@ -1,0 +1,194 @@
+# ###################################################################
+#
+#     _____          __         .__           _____                .__    .__
+#    /     \   _____/  |______  |  |         /  _  \_______   ____ |  |__ |__|__  __ ____   ______
+#   /  \ /  \_/ __ \   __\__  \ |  |        /  /_\  \_  __ \_/ ___\|  |  \|  \  \/ // __ \ /  ___/
+#  /    Y    \  ___/|  |  / __ \|  |__     /    |    \  | \/\  \___|   Y  \  |\   /\  ___/ \___ \ 
+#  \____|__  /\___  >__| (____  /____/     \____|__  /__|    \___  >___|  /__| \_/  \___  >____  >
+#          \/     \/          \/                   \/            \/     \/              \/     \/ 
+#                     
+#
+#
+# Mp3tag parsing for Metal-Archives.com, created by dano on 2007-12-15
+#
+# This file should be in your sources dir. 
+# On Windows XP it's C:\Documents and Settings\*username*\Application Data\Mp3tag\data\sources
+#
+# This config is used to gain informations about an ALBUM.
+#
+#   2009-07-07: Update
+#   2011-04-29: Update
+#
+# Only search for Metal music, normal music is not on the site
+# Also only real Metal. KoRn, Linkin Park or similar is not on the site
+#
+
+[Name]=The Metal Archives
+[BasedOn]=www.metal-archives.com
+[IndexUrl]=http://localhost:5000/search_full?
+[SearchBy]=Band||%artist%||artist=%s||Album||%album%||&album=%s
+[AlbumUrl]=
+[WordSeparator]=+
+[IndexFormat]=%Artist%|%_url%|%Album%|%Type%|%Year%
+[Encoding]=url-utf-8
+[UserAgent]=1
+
+[ParserScriptIndex]=...
+# ###################################################################
+#                   I  N  D  E  X   (JSON version)
+# ###################################################################
+debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Index_JSON.txt"
+debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Index_Input.txt"
+json "ON"
+
+json_foreach "results"
+    # outputto "Artist"
+    json_select "artist"
+    sayrest
+    say "|"
+
+    # outputto "_url"
+    json_select "metal_archives_album_url"
+    sayrest
+    say "|"
+
+    # outputto "Album"
+    json_select "album"
+    sayrest
+    say "|"
+
+    # outputto "Type"
+    json_select "metal_archives_type"
+    sayrest
+    say "|"
+
+    # outputto "Year"
+    json_select "year"
+    sayrest
+    saynewline
+json_foreach_end
+
+[ParserScriptAlbum]=...
+# ###################################################################
+#        A  L  B  U  M   +   A  R  T  I  S  T   (JSON version)
+# ###################################################################
+debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON.txt"
+debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON_Input.txt"
+json "ON"
+
+# =========================
+#     ÁLBUM
+# =========================
+
+json_select_object "album_data"
+
+outputto "Album"
+json_select "album"
+sayrest
+
+outputto "Artist"
+json_select "artist"
+sayrest
+
+outputto "Year"
+json_select "year"
+sayrest
+
+outputto "METAL ARCHIVES DATE"
+json_select "metal_archives_date"
+sayrest
+
+outputto "METAL ARCHIVES BAND URL"
+json_select "metal_archives_band_url"
+sayrest
+
+outputto "METAL ARCHIVES ALBUM URL"
+json_select "metal_archives_album_url"
+sayrest
+
+outputto "coverurl"
+json_select "coverurl"
+sayrest
+
+outputto "METAL ARCHIVES TYPE"
+json_select "metal_archives_type"
+sayrest
+
+outputto "Catalog"
+json_select "catalog"
+sayrest
+
+outputto "METAL ARCHIVES EDITION"
+json_select "metal_archives_edition"
+sayrest
+
+outputto "Publisher"
+json_select "publisher"
+sayrest
+
+outputto "METAL ARCHIVES RATING"
+json_select "metal_archives_rating"
+sayrest
+
+outputto "METAL ARCHIVES INFO"
+json_select "metal_archives_info"
+sayrest
+
+# Tracks
+json_foreach "tracks"
+    outputto "Discnumber"
+    json_select "discnumber"
+    sayrest
+    say "|"
+
+    outputto "Tracks"
+    json_select "track"
+    sayrest
+    say "|"
+
+    outputto "METAL ARCHIVES BONUS"
+    json_select "bonus"
+    sayrest
+    say "|"
+
+    outputto "_length"
+    json_select "length"
+    sayrest
+    say "|"
+
+    outputto "METAL ARCHIVES INSTRUMENTAL"
+    json_select "instrumental"
+    sayrest
+    say "|"
+json_foreach_end
+
+# =========================
+#     ARTISTA
+# =========================
+
+json_unselect_object
+json_select_object "artist_data"
+
+outputto "Country"
+json_select "country"
+sayrest
+
+outputto "METAL ARCHIVES LOCATION"
+json_select "metal_archives_location"
+sayrest
+
+outputto "METAL ARCHIVES STATUS"
+json_select "metal_archives_status"
+sayrest
+
+outputto "METAL ARCHIVES FORMATION YEAR"
+json_select "metal_archives_formation_year"
+sayrest
+
+outputto "Genre"
+json_select "genre"
+sayrest
+
+outputto "METAL ARCHIVES LYRICAL THEMES"
+json_select "metal_archives_lyrical_themes"
+sayrest

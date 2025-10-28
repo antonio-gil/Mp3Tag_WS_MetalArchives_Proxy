@@ -1,0 +1,27 @@
+# ###################################################################
+#
+#     _____          __         .__           _____                .__    .__
+#    /     \   _____/  |______  |  |         /  _  \_______   ____ |  |__ |__|__  __ ____   ______
+#   /  \ /  \_/ __ \   __\__  \ |  |        /  /_\  \_  __ \_/ ___\|  |  \|  \  \/ // __ \ /  ___/
+#  /    Y    \  ___/|  |  / __ \|  |__     /    |    \  | \/\  \___|   Y  \  |\   /\  ___/ \___ \ 
+#  \____|__  /\___  >__| (____  /____/     \____|__  /__|    \___  >___|  /__| \_/  \___  >____  >
+#          \/     \/          \/                   \/            \/     \/              \/     \/ 
+#                     
+#
+#
+# Mp3tag parsing for Metal-Archives.com, created by dano on 2007-12-15
+#
+# This file should be in your sources dir. 
+# On Windows XP it's C:\Documents and Settings\*username*\Application Data\Mp3tag\data\sources
+#
+# This config is used to gain informations about an ALBUM.
+#
+#	2009-07-07: Update
+#	2011-04-29: Update
+#
+# Only search for Metal music, normal music is not on the site
+# Also only real Metal. KoRn, Linkin Park or similar is not on the site
+#
+
+[SearchBy]=Band||%artist%||artist=%s
+[Include]=Me&tal Archives (Proxy)#Metal Archives.inc
