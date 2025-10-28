@@ -37,8 +37,8 @@
 # ###################################################################
 #                   I  N  D  E  X   (JSON version)
 # ###################################################################
-debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Index_JSON.txt"
-debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Index_Input.txt"
+# debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Index_JSON.txt"
+# debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Index_Input.txt"
 json "ON"
 
 json_foreach "results"
@@ -72,8 +72,8 @@ json_foreach_end
 # ###################################################################
 #        A  L  B  U  M   +   A  R  T  I  S  T   (JSON version)
 # ###################################################################
-debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON.txt"
-debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON_Input.txt"
+# debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON.txt"
+# debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_AlbumWithArtist_JSON_Input.txt"
 json "ON"
 
 # =========================

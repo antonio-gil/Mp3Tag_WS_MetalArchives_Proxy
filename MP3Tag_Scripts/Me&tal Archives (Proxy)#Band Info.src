@@ -39,8 +39,8 @@
 # ###################################################################
 #					I  N  D  E  X
 # ###################################################################
-debug "on" "D:\Projects\mp3tag_temp\debug_MA_Band_Index.txt"
-debugwriteinput "D:\Projects\mp3tag_temp\debug_MA_Band_Index_Input.txt"
+# debug "on" "D:\Projects\mp3tag_temp\debug_MA_Band_Index.txt"
+# debugwriteinput "D:\Projects\mp3tag_temp\debug_MA_Band_Index_Input.txt"
 json "ON"
 # json_select_object "results"
 
@@ -72,8 +72,8 @@ json_foreach_end
 # ###################################################################
 #					B  A  N  D
 # ###################################################################
-debug "on" "D:\Projects\mp3tag_temp\debug_MA_Band.txt"
-debugwriteinput "D:\Projects\mp3tag_temp\debug_MA_Band_Input.txt"
+# debug "on" "D:\Projects\mp3tag_temp\debug_MA_Band.txt"
+# debugwriteinput "D:\Projects\mp3tag_temp\debug_MA_Band_Input.txt"
 
 json "ON"
 

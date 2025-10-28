@@ -33,8 +33,8 @@
 # ###################################################################
 #                   A  L  B  U  M   (JSON version)
 # ###################################################################
-debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON.txt"
-debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON_Input.txt"
+# debug "on" "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON.txt"
+# debugwriteinput "D:\Projects\MA_Proxy\debug\debug_MA_Album_JSON_Input.txt"
 json "ON"
 json_select_object "results"
 
