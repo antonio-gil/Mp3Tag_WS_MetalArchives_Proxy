@@ -29,15 +29,16 @@ To be able to run this proxy server Python 3.12.10 needs to be installed and can
 
 ### Automatic (Windows only-ish)
 
-To install all required components, and apply required configurations for this proxy, just run included PowerShell Script `setup.ps1` on a PowerShell terminal.
+To install all required components, and apply required configurations for this proxy, there are two ways to do it:
 
-There are a number of ways to do this, but the easiest way, in my opinion, is to do right click on the file, and select "Run with PowerShell".
+1. Execute/Run included batch script `setup.cmd` by doing double click on it.
+2. Execute/Run included PowerShell script `setup.ps1` by doing right click on the file, and select "Run with PowerShell".
 
 ### Manual
 
 Once downloaded latest version of all file (available on `releases` section), open a PowerShell terminal and navigate to scripts location, and follow these steps.
 
-Also, please note that following commands will use the same names as `setup.ps1` script.
+Also, please note that the following commands are the same as the included on both `setup.*` scripts.
 
 #### 1. Create Proxy's own virtual environment.
 
@@ -89,7 +90,7 @@ And we can close PowerShell afterwards.
 
 ## Usage
 
-To run the Proxy, you can use either the `run.ps1` script provided in the repository (in the same way as `setup.ps1` can be used), or by open a PowerShell terminal and navigate to scripts location, and follow next steps:
+To run the Proxy, you can use either `run.cmd` or `run.ps1` scripts provided in the repository (in the same way as `setup` scripts), or by open a PowerShell terminal and navigate to scripts location, and follow next steps:
 
 ### 1. Activate virtual environment
 ````

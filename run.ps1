@@ -7,6 +7,7 @@ $activateScript = ".\" + $VENV_NAME + "\Scripts\Activate.ps1"
 . $activateScript
 
 Write-Host "[INFO] Running proxy"
+$env:PLAYWRIGHT_BROWSERS_PATH = "0"
 python proxy_ma.py
 
 Write-Host "[INFO] Closing virtual environment"
